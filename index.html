@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRM RD Asesores</title>
+  <meta name="description" content="CRM interno de RD Asesores: clientes, modelos tributarios, documentación, facturas y avisos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="barra-superior">
+    <div class="contenedor barra-superior__interior">
+      <span>Plaza Uncibay 8 · Málaga</span>
+      <label class="selector-usuario">
+        <span>Usuario:</span>
+        <select id="usuario-actual" aria-label="Usuario actual"></select>
+      </label>
+    </div>
+  </div>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a href="#/hoy" class="logo" aria-label="RD Asesores · Inicio">
+        <img id="logo-img" src="https://rdasesores.com/wp-content/uploads/2022/09/rdasesores-lean-v202209.jpg" alt="RD Asesores · miembro de LEAN">
+        <span class="logo-alt" id="logo-alt" hidden>
+          <span class="logo-alt__circulo">RD</span>
+          <span class="logo-alt__texto"><strong>RD Asesores</strong><small>miembro de LEAN</small></span>
+        </span>
+      </a>
+      <nav class="menu" aria-label="Menú principal">
+        <a href="#/hoy" data-ruta="hoy">Hoy</a>
+        <a href="#/clientes" data-ruta="clientes">Clientes</a>
+        <a href="#/calendario" data-ruta="calendario">Calendario</a>
+        <a href="#/ajustes" data-ruta="ajustes">Ajustes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="contenedor" tabindex="-1"></main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <span>RD Asesores · Asesoría fiscal, contable y jurídica · Plaza Uncibay 8, Málaga</span>
+      <span>Los datos se guardan solo en este navegador. Haz copias desde <a href="#/ajustes">Ajustes</a>.</span>
+    </div>
+  </footer>
+
+  <dialog id="dialogo" class="dialogo"></dialog>
+  <div id="aviso-flotante" class="aviso-flotante" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/calendario-fiscal.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
